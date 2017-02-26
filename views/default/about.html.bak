@@ -1,0 +1,30 @@
+{{extend 'layout.html'}}
+
+<head>
+    <br><center><div class="blue">
+    <h2 style="color:#00008B">
+        <strong>About <i><abbr title="Just Between Us">JBTUS</abbr></i></strong>
+    </h2>
+    <title><strong>About <i><abbr title="Just Between Us">JBTUS</abbr></i></strong></title>
+    </div></center>
+</head>
+
+<br><br><br>
+    <center><p>
+     Approaching people that you're romantically interested in can be difficult. For some, approaching other people can be crippling. What is there to talk about? Will they like you? Are they even single? 
+    </p><br>
+    <p>
+        We are all to familiar with the problems that arise from meeting new people. Here at JBTUS, we have worked hard to eliminate the stress and nerves that come with interacting with people that you may be interested in. Striking up a conversation on JBTUS is easy due to the fact that ease of communication is one of our primary focuses. 
+    </p><br>
+    <p>
+        The climate of <i><abbr title="Just Between Us">JBTUS</abbr></i> is one that discriminates as little as possible. The only users that are singled out are the featured users. Everyone else will inevitably fall into anonymity. Your anonymity protects you makes it so that you only communicate with people that you are interested in. This also benefits you by reducing your odds of being seen by someone that would have become your stalker! 
+    </p><br>
+        <p>
+           Your anonymity can be used to protect you as well. For instance, if you are an undercover gay male/female. You will no longer be judged. You are truly free to be whoever you decide to be. We accept you for who you are. No questions asked and no judgement passed!
+        </p><br>
+    <p>
+        Here at <i><abbr title="Just Between Us">JBTUS</abbr></i>, the odds are with you!
+    </p><br><br>
+    <h3>
+        Questions? </h3><h3><a href="{{=URL('default','contact')}}">Contact Me</a>.
+    </h3></center>

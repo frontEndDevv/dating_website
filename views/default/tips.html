@@ -1,0 +1,142 @@
+{{extend 'layout.html'}}
+
+<center><div class="jumbotron">
+<h1 style="color:#00008B">
+    <strong>JBTUS - <a href="{{=URL('default', 'tips')}}">Tips</a></strong>
+</h1><br><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.
+    </p></small><small>
+<div align="center"><h4>
+<a href="{{=URL('default', 'my_messages')}}" class="btn btn-info"><i class="glyphicon glyphicon-envelope"></i><em> Inbox</em></a></h4></div>
+</small>
+</div></center><br>
+
+    <center>
+
+<div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Home Page</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>The <a href="{{=URL('index')}}">Home Page</a> is designed to make life as easy as possible for you by providing a gateway to all the other pages of  <i><abbr title="Just Between Us">JBTUS</abbr></i>. <br> The <a href="{{=URL('index')}}">Home Page</a> starts with your profile picture and username at the top followed by a list of our <a href="{{=URL('default', 'upgrade')}}">featured users</a>. Below our featured users is a list of links that will take you to a page consisting of every <a href="{{=URL('default', 'gay_users')}}">gay</a>, <a href="{{=URL('default', 'straight_users')}}">straight</a>, or <a href="{{=URL('default','bi_users')}}">bisexual</a> user that has joined <i><abbr title="Just Between Us">JBTUS</abbr></i>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Inbox</a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Your <a href="{{=URL('default', 'my_messages')}}">inbox</a> consists of a table that lists every user that has <a href="{{=URL('default', 'to_who')}}">messaged</a> you. I know that communication can be rough if you see that you are <a href="{{=URL('default', 'to_who')}}">messaging</a> a beautiful woman or a handsome man. I have made communication easy by removing the main cause of your nerves which is the other users picture! If you want to know for sure who the other person on the end of your <a href="{{=URL('default', 'to_who')}}">message</a> is, then at the bottom there is a <a href="{{=URL('default', 'find_user')}}">form</a> that you can paste the other user's name into and retrieve their image.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Upgrade</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>The <a href="{{=URL('default', 'upgrade')}}">upgrade</a> page allows you to become a <a href="{{=URL('default', 'upgrade')}}">featured user</a>. Becoming a <a href="{{=URL('default', 'upgrade')}}">featured user</a> will enable you to be seen by every single user that logs into <a href="{{=URL('index')}}">JBTUS</a>. This will help you to receive more <a href="{{=URL('default', 'my_messages')}}">messages</a> and gives you a higher chance at finding what you're looking for.
+                </div>
+            </div>
+    </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Gay, Straight, and Bisexual Pages</a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p><a href="{{=URL('index')}}">JBT</a> requests as little information as possible from you when you sign up. The information that we request from you is used to find people of similar interest. The categories that we use are <a href="{{=URL('default', 'gay_users')}}">Gay</a>, <a href="{{=URL('default', 'straight_users')}}">Straight</a>, or <a href="{{=URL('default','bi_users')}}">Bisexual</a>. These categories are based only on gender and preference. If you would like to be in a different category, change your gender or preference. After you sign up we place you at the top of whatever category that you fall into. As time passes, you will be pushed back by newer users that join <a href="{{=URL('index')}}">JBTUS</a>. If you would like to continue being seen by everyone, we recommend <a href="{{=URL('default', 'upgrade')}}">upgrading</a> your account every once in a while to remain in the <a href="{{=URL('default', 'upgrade')}}">spotlight</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Chat Rooms</a>
+                </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Our chat room page features three different groups that you can mingle with and talk about whatever you would like. We ask that you respect the wishes of others.<br>
+
+Please note that solicitation is not allowed!</p>
+                </div>
+            </div>
+    </div>
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Forum</a>
+                </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Our forum page gives you the ability to create topics and discuss them with whomever decides to comment on  your post. Each topic that is created will be listted in the following format: Topic - username/gender/preference.</p>
+                </div>
+            </div>
+    </div>
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">Delete</a>
+                </h4>
+            </div>
+            <div id="collapseSeven" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Click <a href="{{=URL('default','delete_self')}}">here</a> to delete account.</p>
+                </div>
+            </div>
+    </div>
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">Contact Me</a>
+                </h4>
+            </div>
+            <div id="collapseEight" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>If you have any questions, you can email me at: jbthelppage@gmail.com. If you enjoy <a href="{{=URL('index')}}">JBTUS</a>, like us on <a href="https://www.facebook.com/shaversApps/">Facebook</a>.</p>
+                </div>
+            </div>
+    </div>
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">User Feed</a>
+                </h4>
+            </div>
+            <div id="collapseNine" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>The user feed page includes a slideshow of our featured users as well as the "user feed" that's perpetuated by the posts of our users. We have also included the ability to comment on a specific post and see all of the other comments of that same post.</p>
+                </div>
+            </div>
+    </div>
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Blog</a>
+                </h4>
+            </div>
+            <div id="collapseTen" class="panel-collapse collapse">
+                <div class="panel-body">
+                 <p>The <a href="http://www.jbtus.com/blog">JBTUS Blog</a> details everything from my endeavors to my completed projects. Nothing is off ilmits! 
+                     Keep your eyes on that site because the updates to JBTUS will be featured there first. </p>
+                </div>
+            </div>
+    </div><br><br>
+    <p><strong>Enjoy!</strong></p><br>
+
+</center>

@@ -1,0 +1,21 @@
+{{extend 'layout.html'}}
+<div class='container'>
+    <form>
+        <div class='input'>
+            <input type='text' size='45' name='Send To' value='Username'>
+        </div>
+        {{=form}}
+    </form>
+</div>
+
+<div align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Long ad -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-3291889847638548"
+     data-ad-slot="8465323712"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>

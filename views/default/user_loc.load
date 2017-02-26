@@ -1,0 +1,20 @@
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+<h3><div class="user_loc_head">
+    Search An Area: "City State"<br><br>
+    </h3><div class="user_loc_body">{{=form}}</div>
+<br>
+</div>
+<h3><div class='user_loc_head'>
+    Users From Requested Location<br>
+    </h3></div><br>
+<div class="container">
+   {{for user in user_loc:}}<div class="pic">
+     <a href="{{=URL('default', 'post_message', args=user.id)}}">
+<img src="{{=URL('default', 'download', args=user.picture)}}"><div class='text'>
+         {{=user.username}} : {{=user.gender}}
+         </div>
+    </a>
+    </div>
+{{pass}}
+</div>
+<br><br>

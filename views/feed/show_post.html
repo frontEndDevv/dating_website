@@ -1,0 +1,90 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+
+<center><div class="jumbotron">
+<h1 style="color:#00008B">
+    <strong>JBTUS - User Feed</strong>
+</h1><br><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.
+    </p></small><br>
+    <small><a href="http://www.jbtus.com/worthit">Get paid to play<strong> this game!!!</strong></a></small><br>
+    
+    <small>
+<div align="center">
+    <div align="center">
+    <div class="btn-group">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            <h3 class="btn btn-info">
+               <div class="glyphicon glyphicon-user"></div><strong><em> User Groups</em></strong>
+            </h3><span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="{{=URL('default', 'straight_users')}}" class="active"><h4>
+    <strong><i>Straight</i></strong>
+    </h4></a></li>
+            <li><a href="{{=URL('default', 'gay_users')}}" class="active"><h4>
+    <strong><i>Gay</i></strong>
+    </h4></a></li>
+            <li><a href="{{=URL('default', 'bi_users')}}" class="active"><h4>
+    <strong><i>Bisexual</i></strong>
+    </h4></a></li>
+            <!-- ... -->
+        </ul>
+    </div>
+    <div class="btn-group">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            <h3 class="btn btn-info">
+                <div class="glyphicon glyphicon-comment"></div><strong><i> User Feed, Chat Rooms, & Forum</i></strong>
+            </h3>
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="{{=URL('feed', 'index')}}"><h4>
+<strong><i>User Feed</i></strong>
+</h4></a></li>
+            <li class="divider"></li>
+            <li><a href="{{=URL('default', 'forum')}}"><h4>
+<strong><i>Forum</i></strong>
+</h4></a></li>
+            <li><a href="{{=URL('default', 'straight_group')}}"><h4>
+<strong><i>Straight</i></strong>
+</h4></a></li>
+            <li><a href="{{=URL('default', 'gay_group')}}"><h4>
+<strong><i>Gay</i></strong>
+</h4></a></li>
+            <li><a href="{{=URL('default', 'bi_group')}}"><h4>
+<strong><i>Bisexual</i></strong>
+</h4></a></li>
+        </ul>
+    </div>
+    </div><br>
+    {{=feed_form}}</div>
+</small>
+</div></center>
+<br>
+
+<h2>
+    Reply
+</h2>{{=comm_form}}<br>
+
+{{for post in feedcomments:}}
+    <!-- Left-aligned -->
+<div class="media">
+  <div class="media-left">
+    <img src="{{=URL('default', 'download', args=post.created_by.picture)}}" class="media-object" 
+         style="width:75px; height:75px;">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="{{=URL('default', 'post_message', args=post.created_by.id)}}">
+    {{=db.auth_user[post.created_by].username}}:
+</a></h4>
+    <p>{{=post.your_comment}}</p>
+  </div>
+    </div>
+    <br><hr style="height: 1px;
+    background-color:#00008B;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;"><br>
+{{pass}}
+<br><br>

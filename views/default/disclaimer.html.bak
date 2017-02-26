@@ -1,0 +1,32 @@
+{{extend 'layout.html'}}
+<center><head>
+    <br><center><div class="blue">
+    <h2 style="color:#00008B">
+        <strong>DISCLAIMER</strong>
+    </h2>
+    <title><strong>DISCLAIMER</strong></title>
+    </div></center>
+</head>
+    <br><center>
+<br><br>
+<p>
+    By signing up for this website, you consent that you are age 18 or over.
+</p>
+<p>
+    I reserve the right to change any of these Terms and Conditions at any given time on this website.
+</p>
+<p>
+    Under no circumstances will I be liable for any personal problems resulting from a connection to this website.
+</p><p>
+I reserve the right to change the focus of this website, shut it down, sell it, or change the terms of use at my own discretion.
+</p><p>
+I reserve the right to delete users and ban users as i see fit.
+</p><p>
+I am not responsible for the information shared between users of this website.
+</p>
+    <p>
+        Solicitation of any form is not allowed!
+    </p>
+<p>
+The sharing of your information on jbtus.com is of your own free will. By using this website, you are acquiescing to the tems and conditions.
+</p></center>

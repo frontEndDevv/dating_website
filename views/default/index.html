@@ -1,0 +1,164 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+
+<div class="jumbotron"><center>
+<h1 style="color:#00008B">
+    <strong>Just Between Us</strong>
+</h1><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.
+    </p></small><br>
+    <small><a href="http://www.jbtus.com/worthit">Get paid to play<strong> this game!!!</strong></a></small><br>
+    
+    <br>{{=feed_form}}<br>
+    
+    <h3><div class='self'>
+        {{for selfs in self:}} <img src="{{=URL('default', 'download', args=selfs.picture)}}", style="width:158px;height:158px;"></h3><h5><small>
+ <a href="{{=URL('default', 'my_messages')}}"><strong>{{=selfs.username}}</strong></a></small>
+        </h5> {{pass}}
+ </div>
+    </div></center><br>
+
+<br><hr style="height: 2px;
+    background-color:#00008B;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;"><br>
+
+<!--<h2>
+    <div class="user_loc_head"><strong><div class="glyphicon glyphicon-star"></div><a href="{{=URL('default', 'upgrade')}}"> Featured Users</a></strong></div>
+</h2><br><br>
+<div class="container" align="center">
+   {{for user in users:}}<div class="pic">
+     <a href="{{=URL('default', 'post_message', args=user.id)}}">
+<img src="{{=URL('default', 'download', args=user.picture)}}", style="width:158px;height:158px;"><div class='text'>
+         {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+        </div>
+    </a>
+    </div>
+{{pass}}
+</div> -->
+
+<div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"><strong><div class="glyphicon glyphicon-star"></div>
+                    <a href="{{=URL('default', 'upgrade')}}"> Featured Users</a></strong></h1>
+            </div>
+            {{for user in users:}}<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="{{=URL('default', 'post_message', args=user.id)}}">
+                    <img class="img-responsive" src="{{=URL('default', 'download', args=user.picture)}}" alt="">
+                    <small>
+                     {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+                      </small>
+                </a>
+            </div>{{pass}}
+        </div>
+
+
+    <br><br>
+<div cass="user_loc_head">
+
+    <!--<h3>
+    Newest Straight Users<br><br>
+    <a href="{{=URL(vars={'page':int(request.vars.page)-1})}}">Previous</a> | <a href="{{=URL(vars={'page':int(request.vars.page)+1})}}">Next</a> <br>
+</h3>
+</div>
+<div class="container">
+   {{for user in straight_users:}}<div class="">
+     <a href="{{=URL('default', 'post_message', args=user.id)}}">
+<img src="{{=URL('default', 'download', args=user.picture)}}", style="width:158px;height:158px;"><div class='text'>
+         {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+         </div>
+    </a>
+    </div>
+    {{pass}}
+</div>-->
+<br><br>
+</center>
+
+    <!--<center><a href="{{=URL('default', 'user_loc')}}"><h2>
+<strong><i>Search Any Location</i></strong>
+</center>-->
+
+<hr style="height: 2px;
+    background-color:#555;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;"><br>
+
+<center>
+<div align="center">
+    <div class="btn-group">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            <h3 class="btn btn-info">
+               <div class="glyphicon glyphicon-user"></div><strong><em> User Groups</em></strong>
+            </h3><span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="{{=URL('default', 'straight_users')}}" class="active"><h4>
+    <strong><i>Straight</i></strong>
+    </h4></a></li>
+            <li><a href="{{=URL('default', 'gay_users')}}" class="active"><h4>
+    <strong><i>Gay</i></strong>
+    </h4></a></li>
+            <li><a href="{{=URL('default', 'bi_users')}}" class="active"><h4>
+    <strong><i>Bisexual</i></strong>
+    </h4></a></li>
+            <!-- ... -->
+        </ul>
+    </div>
+    <div class="btn-group">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            <h3 class="btn btn-info">
+                <div class="glyphicon glyphicon-comment"></div><strong><i> User Feed, Chat Rooms, & Forum</i></strong>
+            </h3>
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="{{=URL('feed', 'index')}}"><h4>
+<strong><i>User Feed</i></strong>
+</h4></a></li>
+            <li class="divider"></li>
+            <li><a href="{{=URL('default', 'forum')}}"><h4>
+<strong><i>Forum</i></strong>
+</h4></a></li>
+            <li class="divider"></li>
+            <li><a href="{{=URL('default', 'straight_group')}}"><h4>
+<strong><i>Straight</i></strong>
+</h4></a></li>
+            <li><a href="{{=URL('default', 'gay_group')}}"><h4>
+<strong><i>Gay</i></strong>
+</h4></a></li>
+            <li><a href="{{=URL('default', 'bi_group')}}"><h4>
+<strong><i>Bisexual</i></strong>
+</h4></a></li>
+        </ul>
+    </div>
+    </div>
+
+</center><br>
+
+<!--
+    <center>
+
+    <br><a href="{{=URL('default', 'bi_users')}}"><h2>
+    <strong><i>Bisexual Users</i></strong>
+    </h2></a>
+
+<br><a href="{{=URL('default', 'gay_users')}}"><h2>
+    <strong><i>Gay Users</i></strong>
+    </h2></a>
+
+<br><a href="{{=URL('default', 'straight_users')}}"><h2>
+    <strong><i>Straight Users</i></strong>
+    </h2></a>
+
+    <br><a href="{{=URL('default', 'group_chat')}}"><h2>
+<strong><i>Chat Rooms</i></strong>
+</h2></a>
+
+      <br><a href="{{=URL('default', 'forum')}}"><h2>
+<strong><i>Forum</i></strong>
+</h2></a>
+    <br><br></center>--><br><br><br>
+</body>

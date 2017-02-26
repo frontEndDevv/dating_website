@@ -1,0 +1,33 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+<br><center><h2>
+Search Any Location
+</h2><br><p>
+To search an area, select any state.
+</p><p>
+We have also included a quick message box. With this, you can message any user without reloading the page!
+</p></center>
+<br><br>
+<p><center><div class="center"><h3>
+<strong>Send A Quick Message</strong>
+</h3><br>
+    {{=LOAD('default','to_who.load',ajax=True)}}<br>
+</p></div></center><br><br><h3>
+    <center>Search</center><br><br>
+    </h3><center>{{=form}}</center>
+<br>
+
+<h3><div class='user_loc_head'>
+    Users From Requested Location<br>
+    </h3></div><br>
+<div class="container">
+   {{for user in user_loc:}}<div class="pic">
+     <a href="{{=URL('default', 'post_message', args=user.id)}}">
+<img src="{{=URL('default', 'download', args=user.picture)}}"><div class='text'>
+         {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+         </div>
+    </a>
+    </div>
+{{pass}}
+</div>
+<br><br>

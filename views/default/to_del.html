@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}<br>
+<h2>
+    Selected: {{for p in people:}}{{=people.username}}{{pass}}
+</h2><br><br>
+{{ for row in rows:}}
+<table>
+    <tr><td>
+        <a href="#">{{=row.username}}</a>
+    </td></tr>
+</table>
+{{pass}}

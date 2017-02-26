@@ -1,0 +1,7 @@
+{{ for row in rows:}}
+<table>
+    <tr><td>
+        <a href="{{=URL('to_del',args=row.id)}}">{{=row.username}}</a>
+    </td></tr>
+</table>
+{{pass}}

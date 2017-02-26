@@ -1,0 +1,17 @@
+<br><br><div class="user_loc_head">
+<h3>
+    Newest Bisexual Users<br><br>
+    <a href="{{=URL(vars={'page':int(request.vars.page)-1})}}">Previous</a> | <a href="{{=URL(vars={'page':int(request.vars.page)+1})}}">Next</a> <br>
+</h3>
+</div>
+<div class="container">
+   {{for user in bi_users:}}<div class="pic">
+     <a href="{{=URL('default', 'post_message', args=user.id)}}">
+<img src="{{=URL('default', 'download', args=user.picture)}}"><div class='text'>
+         {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+         </div>
+    </a>
+    </div>
+{{pass}}
+</div>
+<br><br>

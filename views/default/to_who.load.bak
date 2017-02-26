@@ -1,0 +1,5 @@
+{{=form}}
+<script>
+    $(document).ready(function(){('textarea').attr('cols',30);});
+    $(document).ready(function(){('input').attr('cols',30);});
+</script>

@@ -1,0 +1,79 @@
+{{extend 'layout.html'}}
+<head>
+    <link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+  <!-- all your great html... -->
+
+
+
+<div class="jumbotron"><center>
+<h1 style="color:#00008B">
+    <strong>Just Between Us</strong>
+</h1><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.
+    </p></small>
+    <h3><div class='self'>
+        {{for selfs in self:}} <img src="{{=URL('default', 'download', args=selfs.picture)}}", style="width:158px;height:158px;"></h3><h5><small>
+ <a href="{{=URL('default', 'my_messages')}}"><strong>{{=selfs.username}}</strong></a></small>
+        </h5> {{pass}}</div>
+    </div></center><br>
+<hr>
+
+<br><br>
+<center><h2>
+    <strong>Featured Users</strong>
+    </h2></center><br><br>
+<div class="col-sm-4 text-center"></div>
+<div class="col-sm-4"><div class="row">
+<div class="carousel slide" id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class=" col-centered" align="center"><a href="{{=URL('default', 'my_messages')}}">{{for selfs in self:}}
+        </h5> <img src="{{=URL('default', 'download', args=selfs.picture)}}", style="width:158px;height:158px;" class="img-responsive">
+          <small>{{=selfs.username}}</small></a>{{pass}}</div>
+    </div>
+    
+    <!--col-md-4 col-sm-2 col-centered-->
+    {{for user in users:}}
+    <div class="item">
+      <div class=" col-centered" align="center"><a href="{{=URL('default', 'post_message', args=user.id)}}"><img src="{{=URL('default', 'download', args=user.picture)}}", style="width:158px;height:158px;" class="img-responsive"><small>
+          {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+      </small></a></div>
+    </div>{{pass}}
+    
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+    </div>
+    </div>
+
+<br><br>
+
+<div class="container">
+  <h1>Featured Users</h1>
+  <hr>
+  
+  <h2>6-4-3 grid example<p class="lead">6 columns on desktop, 4 columns on tablets, 3 columns on phones</p></h2>
+  
+  <p>When one of the titles is longer the stacking breaks and a gap appears if the float isn't cleared.  Using media queries and an extra div after each element in the portfolio ensures that the content is always aligned nicely.</p>
+
+  <div class="row text-center portfolio">
+
+    {{for user in users:}}<div class="col-lg-2 col-sm-3 col-xs-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <a href="{{=URL('default', 'post_message', args=user.id)}}">
+                    <img src="{{=URL('default', 'download', args=user.picture)}}" class="img-thumbnail img-responsive">
+                </a>
+            </div>
+            <div class="panel-footer">
+                {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+            </div>  
+        </div> 
+    </div>
+     <div class="clear"></div>{{pass}}
+  </div>
+</div>

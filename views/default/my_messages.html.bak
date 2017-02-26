@@ -1,0 +1,31 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+<head>
+    <center><div class="jumbotron">
+<h1 style="color:#00008B">
+   <strong>Inbox</strong>
+</h1><br><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.
+    </p></small><div align="center"><h4> 
+<a href="{{=URL('default', 'sent_msgs')}}" class="btn btn-info"><i class="glyphicon glyphicon-inbox"></i><em> Sent Messages</em></a></h4></div>
+    <title><strong>Inbox</strong></title>
+
+        <center><br>{{=feed_form}}<br></center>
+
+    </div>
+</head>
+<br>
+<center>
+
+
+<div class='inlin'>
+{{=grid}}<br></div>
+<br><br>
+
+<div class="center">
+<p>
+    {{=LOAD('default','find_user.load',ajax=True)}}<br>
+</p>
+</div>
+
+</center>

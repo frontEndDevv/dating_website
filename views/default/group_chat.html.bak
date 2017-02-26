@@ -1,0 +1,87 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+
+<head>
+    <div class="jumbotron"><center>
+<h1 style="color:#00008B">
+    <strong>Just Between Us - Group Chat</strong>
+</h1><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.
+    </p></small>
+
+        <center><br>{{=feed_form}}<br></center>
+
+    <h3><div class='self'>
+        {{for selfs in self:}} <img src="{{=URL('default', 'download', args=selfs.picture)}}", style="width:158px;height:158px;"></h3><h5><small>
+ <a href="{{=URL('default', 'my_messages')}}"><strong>{{=selfs.username}}</strong></a></small>
+        </h5> {{pass}}</div>
+    </div></center><br>
+</head>
+
+<br><br><h2>
+    <div class="user_loc_head"><strong><div class="glyphicon glyphicon-star"></div><a href="{{=URL('default', 'upgrade')}}"> Featured Users</a></strong></div>
+</h2><br><br>
+
+<!--
+<div class="container">
+   {{for user in users:}}<div class="pic">
+     <a href="{{=URL('default', 'post_message', args=user.id)}}">
+<img src="{{=URL('default', 'download', args=user.picture)}}", class="img-responsive", style="width:158px;height:158px;"><div class='text'>
+         {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+        </div>
+    </a>
+    </div>
+{{pass}}
+</div> -->
+
+{{for user in users:}}<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="{{=URL('default', 'post_message', args=user.id)}}">
+                    <img class="img-responsive" src="{{=URL('default', 'download', args=user.picture)}}" alt="">
+                    <small>
+                     {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+                      </small>
+                </a>
+            </div>{{pass}}<br><br>
+    
+    <small>
+<div align="center">
+    <div align="center">
+    <div class="btn-group">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            <h3 class="btn btn-info">
+                <div class="glyphicon glyphicon-comment"></div><strong><i> Chat Rooms</i></strong>
+            </h3>
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="{{=URL('default', 'straight_group')}}"><h4>
+<strong><i>Straight</i></strong>
+</h4></a></li>
+            <li><a href="{{=URL('default', 'gay_group')}}"><h4>
+<strong><i>Gay</i></strong>
+</h4></a></li>
+            <li><a href="{{=URL('default', 'bi_group')}}"><h4>
+<strong><i>Bisexual</i></strong>
+</h4></a></li>
+        </ul>
+    </div>
+    </div></div>
+</small>
+
+    <br><br> <!--
+<br><a href="{{=URL('default', 'bi_group')}}"><h2>
+<strong><i>Bisexual Chat</i></strong>
+</h2></a>
+
+    <br><a href="{{=URL('default', 'gay_group')}}"><h2>
+<strong><i>Gay Chat</i></strong>
+</h2></a>
+
+    <br><a href="{{=URL('default', 'straight_group')}}"><h2>
+<strong><i>Straight Chat</i></strong>
+    </h2></a></center>
+<center><p><br><br><br><br>
+    Please note that our group chats will be cleared daily at 6am. Enjoy!<br><br>
+    </p>-->
+
+    <br><br><br><br></center>

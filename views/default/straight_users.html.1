@@ -1,0 +1,51 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+<div class="jumbotron">
+<center><h1 style="color:#00008B">
+   <strong> Straight Users</strong>
+        </h1><br><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.
+    </p></small>
+</center>
+    
+        <center><br>{{=feed_form}}<br></center>
+
+<small><div class="inline"><h4>
+    <div align="left"><i><a href="{{=URL('default', 'straight_women')}}" class="btn btn-info"><i class="glyphicon glyphicon-hand-left"></i><em> Women</em></a></i>
+</h4>
+</div><h4>
+    <div align="right"><i><a href="{{=URL('default', 'straight_men')}}" class="btn btn-info"><em>Men </em><i class="glyphicon glyphicon-hand-right"></i></a></i>
+</h4>
+</div>
+</div></small>
+</div><br><br>
+
+
+ <div class="col-sm-4 text-center"></div>
+<div class="col-sm-4"><div class="row">
+<div class="carousel slide" id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class=" col-centered" align="center"><a href="{{=URL('default', 'my_messages')}}">{{for selfs in self:}}
+        </h5> <img src="{{=URL('default', 'download', args=selfs.picture)}}", style="width:158px;height:158px;" class="img-responsive">
+          <small>{{=selfs.username}}</small></a>{{pass}}</div>
+    </div>
+    <!--col-md-4 col-sm-2 col-centered-->
+    {{for user in straight_users:}}
+    <div class="item">
+      <div class=" col-centered" align="center"><a href="{{=URL('default', 'post_message', args=user.id)}}"><img src="{{=URL('default', 'download', args=user.picture)}}", style="width:158px;height:158px;" class="img-responsive"><small>
+          {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+      </small></a></div>
+    </div>{{pass}}
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+    </div>
+    </div><br><br><br>
+
+<center> <a href="{{=URL(vars={'page':int(request.vars.page)-1})}}"><strong><div class="btn"><i class="glyphicon glyphicon-backward"></i> Less</div></strong></a> <a href="{{=URL(vars={'page':int(request.vars.page)+1})}}"><div class="btn ">More <i class="glyphicon glyphicon-forward"></i></div></a><br><small>Your picture marks the beginning and end of the slideshow. To see more users, click 'more'</small>
+
+<br><br>
+<strong><div align="center"><h4>
+<a href="{{=URL('default', 'my_messages')}}" class="btn btn-info"><i class="glyphicon glyphicon-envelope"></i><em> Inbox</em></a></h4></div></strong>
+<br></center>

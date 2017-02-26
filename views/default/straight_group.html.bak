@@ -1,0 +1,40 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+
+<center><div class="jumbotron">
+<h1 style="color:#00008B">
+    <strong>JBTUS - Chat Room</strong>
+</h1><br><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.
+    </p></small>
+
+    <center><br>{{=feed_form}}<br></center>
+
+    <small>
+<div align="center"><h4>
+<a href="{{=URL('default', 'group_chat')}}" class="btn btn-info"><i class="glyphicon glyphicon-comment"></i><em> Chat Rooms</em></a></h4></div>
+</small>
+</div></center><br>
+
+<center>{{=form}}<br><br>
+{{for message in messages:}}
+
+<a href="{{=URL('default', 'post_message', args=message.created_by.id)}}">
+    {{=message.created_by.username}}:
+</a>
+    {{=message.straight_message}}<br>
+
+<br><br>
+{{pass}}
+</center>
+<br><br><br>
+
+<center>
+    <a href="{{=URL(vars={'page':int(request.vars.page)-1})}}"><strong><div class="btn"><i class="glyphicon glyphicon-backward"></i> Less</div></strong></a> <a href="{{=URL(vars={'page':int(request.vars.page)+1})}}"><div class="btn ">More <i class="glyphicon glyphicon-forward"></i></div></a>
+</center>
+
+<br><br><small>
+<div align="center"><h4>
+<a href="{{=URL('default', 'my_messages')}}" class="btn btn-info"><i class="glyphicon glyphicon-envelope"></i><em> Inbox</em></a></h4></div>
+</small>
+<br></center>

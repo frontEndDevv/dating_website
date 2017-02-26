@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+<h2><div class='self'>
+    {{for selfs in self:}} <img src="{{=URL('default', 'download', args=selfs.picture)}}", style="width:158px;height:158px;"> <strong>{{=selfs.username}}</strong>{{pass}}.</div>
+    <br>
+</h2><br><br> <center><h3>
+<br><br><a href="{{=URL('default','delete_self')}}">Delete Me</a>
+</center>

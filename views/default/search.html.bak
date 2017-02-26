@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+<br><br><h1>
+<strong>Search</strong>
+</h1><br>
+{{=form}}<br>{{=target_div}}
+<br><br>
+{{=A('Forum',_href=URL('forum'))}}<br><br>

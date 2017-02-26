@@ -1,0 +1,71 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+    <br><center><div class="blue">
+    <h2>
+        <strong>Just Between Us - Chat Rooms</strong>
+    </h2><p>
+    Visit the {{=A('disclaimer',_href=URL('disclaimer'))}} or
+    Visit the {{=A('help',_href=URL('tips'))}}
+    page for guidelines
+    </p></center><br>
+
+<h2><div class='self'>
+    {{for selfs in self:}} <img src="{{=URL('default', 'download', args=selfs.picture)}}", style="width:158px;height:158px;"> <strong>{{=selfs.username}}</strong>{{pass}}.<br><br><strong>JBTUS's</strong> <a href="https://www.facebook.com/shaversApps/">facebook</a><br></div>
+    <br>
+</h2><br>
+
+<br><br><h2>
+    <div class="user_loc_head"><strong><a href="{{=URL('default', 'upgrade')}}">Featured Users</a></strong></div>
+</h2><br><br>
+<div class="container">
+   {{for user in users:}}<div class="pic">
+     <a href="{{=URL('default', 'post_message', args=user.id)}}">
+<img src="{{=URL('default', 'download', args=user.picture)}}", style="width:158px;height:158px;"><div class='text'>
+         {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+        </div>
+    </a>
+    </div>
+{{pass}}
+</div> <br><br>
+
+<center>
+    <br><br>
+    <div class="btn-group">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            <h3>
+                <strong><i>Chat Rooms & Forum</i></strong>
+            </h3>
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="{{=URL('default', 'forum')}}"><h4>
+<strong><i>Forum</i></strong>
+</h4></a></li>
+            <li><a href="{{=URL('default', 'straight_group')}}"><h4>
+<strong><i>Straight</i></strong>
+</h4></a></li>
+            <li><a href="{{=URL('default', 'gay_group')}}"><h4>
+<strong><i>Gay</i></strong>
+</h4></a></li>
+            <li><a href="{{=URL('default', 'bi_group')}}"><h4>
+<strong><i>Bisexual</i></strong>
+</h4></a></li>
+        </ul>
+    </div>
+    <br><br> <!--
+<br><a href="{{=URL('default', 'bi_group')}}"><h2>
+<strong><i>Bisexual Chat</i></strong>
+</h2></a>
+
+    <br><a href="{{=URL('default', 'gay_group')}}"><h2>
+<strong><i>Gay Chat</i></strong>
+</h2></a>
+
+    <br><a href="{{=URL('default', 'straight_group')}}"><h2>
+<strong><i>Straight Chat</i></strong>
+    </h2></a></center>
+<center><p><br><br><br><br>
+    Please note that our group chats will be cleared daily at 6am. Enjoy!<br><br>
+    </p>--> 
+    
+    <br><br><br><br></center>

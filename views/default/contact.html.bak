@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+
+<center><div class="jumbotron">
+<h1 style="color:#00008B">
+    <strong>JBTUS - Contact Me</strong>
+</h1><br><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.
+    </p></small><small>
+<div align="center"><h4>
+<a href="{{=URL('default', 'my_messages')}}" class="btn btn-info"><i class="glyphicon glyphicon-envelope"></i><em> Inbox</em></a></h4></div>
+</small>
+</div></center><br>
+
+<br><center>
+    <h4><strong><a href="https://www.facebook.com/shaversApps/" class="btn btn-success">Facebook</a> </strong></h4><br>
+    <h4><strong><a href="mailto:jbthelppage" class="btn btn-warning">Email</a> </strong></h4>
+</center>

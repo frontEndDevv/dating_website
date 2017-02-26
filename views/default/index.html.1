@@ -1,0 +1,84 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+<head>
+    <br><center><div class="blue">
+    <h2>
+        <strong>Just Between Us</strong>
+    </h2>
+    <title><strong>Just Between Us</strong></title>
+    </div></center><br>
+</head>
+
+<body>
+<h2><div class='self'>
+    {{for selfs in self:}} <img src="{{=URL('default', 'download', args=selfs.picture)}}", style="width:158px;height:158px;"> <strong>{{=selfs.username}}</strong>{{pass}}.<br><br><strong>JBTUS's</strong> <a href="https://www.facebook.com/shaversApps/">facebook</a><br></div>
+    <br>
+</h2>
+<br><br><h2>
+    <div class="user_loc_head"><strong><a href="{{=URL('default', 'upgrade')}}">Featured Users</a></strong></div>
+</h2><br><br>
+<div class="container">
+   {{for user in users:}}<div class="pic">
+     <a href="{{=URL('default', 'post_message', args=user.id)}}">
+<img src="{{=URL('default', 'download', args=user.picture)}}", style="width:158px;height:158px;"><div class='text'>
+         {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+        </div>
+    </a>
+    </div>
+{{pass}}
+</div> <br><br>
+<div cass="user_loc_head">
+
+    <!--<h3>
+    Newest Straight Users<br><br>
+    <a href="{{=URL(vars={'page':int(request.vars.page)-1})}}">Previous</a> | <a href="{{=URL(vars={'page':int(request.vars.page)+1})}}">Next</a> <br>
+</h3>
+</div>
+<div class="container">
+   {{for user in straight_users:}}<div class="">
+     <a href="{{=URL('default', 'post_message', args=user.id)}}">
+<img src="{{=URL('default', 'download', args=user.picture)}}", style="width:158px;height:158px;"><div class='text'>
+         {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+         </div>
+    </a>
+    </div>
+    {{pass}}
+</div>-->
+<br><br>
+</center>
+
+    <!--<center><a href="{{=URL('default', 'user_loc')}}"><h2>
+<strong><i>Search Any Location</i></strong>
+</center>-->
+
+<center> 
+
+              <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">User Groups
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="{{=URL('default', 'bi_users')}}"><h4>
+    <strong><i>Bisexual Users</i></strong>
+    </h4></a></li>
+        <li><a href="{{=URL('default', 'gay_users')}}"><h4>
+    <strong><i>Gay Users</i></strong>
+    </h4></a></li>
+        <li><a href="{{=URL('default', 'straight_users')}}"><h4>
+    <strong><i>Straight Users</i></strong>
+    </h4></a></li>
+      </ul>
+    </div>
+                
+</div>
+
+    <br>
+
+    <br><a href="{{=URL('default', 'group_chat')}}"><h2>
+<strong><i>Chat Rooms</i></strong>
+</h2></a>
+    
+      <br><a href="{{=URL('default', 'forum')}}"><h2>
+<strong><i>Forum</i></strong>
+</h2></a>
+<br><br>
+</body>

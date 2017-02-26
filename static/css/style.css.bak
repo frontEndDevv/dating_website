@@ -1,0 +1,120 @@
+.container{
+display: flex;
+flex-flow: row wrap ;
+flex-direction: row;
+justify-content: center ;
+height:100%;
+width: 100%;
+margin:0px;
+border: none;
+}
+img{
+    width:100%;
+    max-width:158px;
+    max-height:158px;
+}
+pic{
+    flex:1 1 0;
+    width:100%;
+    max-width:158px;
+    max-height:158px;
+}
+@media screen and (max-device-width:320px){
+    img{
+        width:100%;
+        max-width:70px;
+        max-height:70px;
+    }
+    pic{
+        flex:1 1 0;
+        width:100%;
+        max-width:70px;
+        max-height:70px;
+    }
+}
+@media screen and (min-device-width:321px){
+     img{
+        width:100%;
+        max-width:158px;
+        max-height:158px;
+    }
+    pic{
+        flex:1 1 0;
+        width:100%;
+        max-width:158px;
+        max-height:158px;
+    }
+}
+.inline{
+    float:left;
+}
+.inline2{
+width:40%;
+    float:left;
+    margin-top:80px;
+}
+.center{
+    width:25%;
+    text-align:center;
+    width:35%;
+}
+.self{
+}
+.text{
+    width:50%;
+text-align:center;
+}
+.user_loc{
+    width:25%;
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+}
+.user_loc_head{
+text-align:center;
+}
+.user_loc_body{
+    margin-left:275px;
+    margin-right:275px;
+text-align:center;
+    width:35%;
+}
+.blue{
+color:#00008B;
+}
+
+.carousel-inner .active.left { left: -25%; }
+.carousel-inner .next        { left:  25%; }
+.carousel-inner .prev		 { left: -25%; }
+.carousel-control 			 { width:  15%; }
+.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+/* add a little bottom space under the images */
+
+@media (max-width: 767px) {
+    .portfolio>.clear:nth-child(6n)::before {
+      content: '';
+      display: table;
+      clear: both;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .portfolio>.clear:nth-child(8n)::before {
+      content: '';
+      display: table;
+      clear: both;
+    }
+}
+@media (min-width: 1200px) {
+    .portfolio>.clear:nth-child(12n)::before {  
+      content: '';
+      display: table;
+      clear: both;
+    }
+}

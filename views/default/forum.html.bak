@@ -1,0 +1,53 @@
+{{extend 'layout.html'}}
+    <link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+
+<head>
+    <br><center><div class="blue"><div class="jumbotron">
+    <h1>
+        <strong>Just Between Us - Forum</strong>
+    </h1><br><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.<br><br>
+    Visit the {{=A('disclaimer',_href=URL('disclaimer'))}} or
+    Visit the {{=A('help',_href=URL('tips'))}}
+    page for guidelines
+    </p></small><br>
+
+    <div align="center">
+        <a href="{{=URL('create')}}" class="btn btn-info"><i class="glyphicon glyphicon-pencil"></i> <em> New Topic</em></a><br>
+    </div>
+
+    <center><br>{{=feed_form}}<br></center>
+
+    <title><strong>Just Between Us - Forum</strong></title>
+    </div></div></center>
+</head>
+
+<!--<head>
+    <br><center><div class="blue">
+    <h2>
+        <strong>Just Between Us - Forum</strong>
+    </h2><p>
+    Visit the {{=A('disclaimer',_href=URL('disclaimer'))}} or
+    Visit the {{=A('help',_href=URL('tips'))}}
+    page for guidelines
+    </p>
+    <title><strong>Just Between Us - Forum</strong></title>
+    </div></center><br>
+</head><center>
+    <div align="left">
+        {{=A('Search',_href=URL('search'))}}<br>
+    </div>
+    <div align="left">
+        <a href="{{=URL('create')}}" class="btn btn-info"><i class="glyphicon glyphicon-pencil"></i> <em> New Topic</em></a><br>
+    </div>-->
+    <center><strong></strong><h1>
+        All Topics
+        </h1></strong><br><br>
+<ul>{{for page in pages:}}
+    <h4><a href="{{=URL('show',args=page.id)}}">{{=page.title}}</a> - {{=page.created_by.username}}/{{=page.created_by.gender}}/{{=page.created_by.preference}}</h4>
+{{pass}}</ul>
+</center>
+<br><br>
+
+<center><a href="{{=URL(vars={'page':int(request.vars.page)-1})}}"><strong><div class="btn"><i class="glyphicon glyphicon-backward"></i> Less</div></strong></a> <a href="{{=URL(vars={'page':int(request.vars.page)+1})}}"><div class="btn ">More <i class="glyphicon glyphicon-forward"></i></div></a>
+<br></center>

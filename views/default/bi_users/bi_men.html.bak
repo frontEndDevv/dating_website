@@ -1,0 +1,3 @@
+{{extend 'layout.html'}}
+<h1>This is the default/bi_users/bi_men.html template</h1>
+{{=BEAUTIFY(response._vars)}}

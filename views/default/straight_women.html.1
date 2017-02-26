@@ -1,0 +1,25 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+<center><div class="jumbotron">
+<h1 style="color:#00008B">
+   <strong>Straight Women</strong>
+</h1><br><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.
+    </p></small><small>
+<div align="left">
+<h3><i><a href="{{=URL('default', 'straight_users')}}"class="btn btn-info"><i class="glyphicon glyphicon-hand-left"></i><em> Back</em></a></h3></div>
+</small>
+</div></center><br><br>
+<div class="container">
+   {{for user in straight_users:}}<div class="pic">
+     <a href="{{=URL('default', 'post_message', args=user.id)}}">
+<img src="{{=URL('default', 'download', args=user.picture)}}"><div class='text'>
+         {{=user.username}} : {{=user.gender}}
+         </div>
+    </a>
+    </div>
+{{pass}}</div><br><br><br>
+
+<center><a href="{{=URL(vars={'page':int(request.vars.page)-1})}}"><strong><i>Previous</i></strong></a> | <a href="{{=URL(vars={'page':int(request.vars.page)+1})}}"><strong><i>Next</i></strong></a> <br>
+<br><br><div align="center"><h4> 
+<a href="{{=URL('default', 'my_messages')}}" class="btn btn-info"><i class="glyphicon glyphicon-envelope"></i><em> Inbox</em></a></h4></div><br></center>

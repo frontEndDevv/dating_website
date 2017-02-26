@@ -1,0 +1,71 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+
+<center><div class="jumbotron">
+<h1 style="color:#00008B">
+    <strong>JBTUS - User Feed</strong>
+</h1><br><small><p>
+    - Here at JBTUS, the odds are with you. If you agree, <i><a href="https://www.facebook.com/shaversApps/"> like us <i class="glyphicon glyphicon-thumbs-up"></i></a></i>.
+    </p></small>
+
+<center><br>{{=feed_form}}<br></center>
+
+</div></center>
+<br>
+
+    <center><h1 class="page-header"><strong><div class="glyphicon glyphicon-star"></div>
+                    <a href="{{=URL('default', 'upgrade')}}"> Featured Users</a></strong></h1></center><br>
+    <div class="col-sm-4 text-center"></div>
+<div class="col-sm-4"><div class="row">
+<div class="carousel slide" id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class=" col-centered" align="center"><a href="{{=URL('default', 'my_messages')}}">{{for selfs in self:}}
+        </h5> <img src="{{=URL('default', 'download', args=selfs.picture)}}", style="width:158px;height:158px;" class="img-responsive">
+          <small>{{=selfs.username}}</small></a>{{pass}}</div>
+    </div>
+    <!--col-md-4 col-sm-2 col-centered-->
+    {{for user in users:}}
+    <div class="item">
+      <div class=" col-centered" align="center"><a href="{{=URL('default', 'post_message', args=user.id)}}"><img src="{{=URL('default', 'download', args=user.picture)}}", style="width:158px;height:158px;" class="img-responsive"><small>
+          {{=user.username}} : {{=user.gender}} / {{=user.preference}}
+      </small></a></div>
+    </div>{{pass}}
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+    </div>
+    </div></div><br><hr style="height: 4px;
+    background-color:#00008B;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;"><br>
+
+
+{{for message in messages:}}
+    <!-- Left-aligned -->
+<div class="media">
+  <div class="media-left">
+    <img src="{{=URL('default', 'download', args=message.created_by.picture)}}" class="media-object" 
+         style="width:75px; height:75px;">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="{{=URL('default', 'post_message', args=message.created_by.id)}}">
+    {{=message.created_by.username}}:
+</a></h4>
+    <p>{{=message.feed_post}}</p>
+      <small><a href="{{=URL('feed', 'show_post', args=message.id)}}">
+    Comment
+</a></small>
+  </div>
+    </div>
+    <br><hr style="height: 1px;
+    background-color:#00008B;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;"><br><br>
+{{pass}}
+</center>
+
+
+<br><br><br>

@@ -1,0 +1,19 @@
+{{extend 'layout.html'}}
+<link href="{{=URL('static','css/style.css')}}" rel="stylesheet" type="text/css"/>
+{{=form}}
+<br>
+<div class="text">
+<h3>
+    {{=request.vars.location}}<br>
+</h3>
+</div>
+   {{for user in user_loc:}}<div class="pic">
+     <a href="{{=URL('default', 'post_message', args=user.id)}}">
+<img src="{{=URL('default', 'download', args=user.picture)}}"><div class='text'>
+         {{=user.username}} : {{=user.gender}}
+         </div>
+    </a>
+    </div>
+{{pass}}
+</div>
+<br><br>

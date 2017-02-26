@@ -1,0 +1,19 @@
+<!--</form>
+    <br>
+    <br>
+    <div class="stripe"><h3>
+    Two Weeks as a featured user - 15.99$
+    </h3><br>
+<form action="{{=URL('default','upgrade1')}}" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_3CvM1f4PToPJaKX9htgZO95n"
+    data-amount="1599"
+    data-name="Diamond option"
+    data-description="Two weeks as a featured user!"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto"
+    data-zip-code="true">
+  </script>
+</form>
+-->

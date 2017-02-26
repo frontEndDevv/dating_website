@@ -1,0 +1,20 @@
+{{extend 'layout.html'}}
+<center><div class="jumbotron">
+<h1 style="color:#00008B">
+    <strong>{{=page.title}}</strong>
+</h1><img src="{{=URL('default', 'download', args=page.created_by.picture)}}", style="width:158px;height:158px;"><h5><small>
+ created by <a href="{{=URL('default', 'post_message', args=page.created_by.id)}}"> {{=db.auth_user[page.created_by].username}}</small></a>
+</h5><br><small><a href="{{=URL('forum')}}" class="btn btn-info"><i class="glyphicon glyphicon-list"></i><em> Forum Main</em></a></small></div><br>
+<h3>{{=MARKMIN(page.body)}}</h3><br><br><br>
+<h2>
+    Replies
+</h2>
+{{for post in comments:}}
+<br><p>
+    <a href="{{=URL('default', 'post_message', args=post.created_by.id)}}"> {{=db.auth_user[post.created_by].username}}:</a> <i>{{=post.body}}</i>
+</p>
+{{pass}}<br><br><br>
+<h2>
+    Reply
+</h2>{{=form}}<br><br>
+</center>
