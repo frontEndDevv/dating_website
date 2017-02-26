@@ -24,8 +24,8 @@
 def auth_user():
     from gluon.contrib.stripe import StripeForm
     form = StripeForm(
-        pk="pk_live_oCW2Cs6vVgVm7vruOZab5ltR",
-        sk="sk_live_txoDl3rcoycXeGTGpoblBWGN",
+        pk="stripe key",
+        sk="stripe key",
         amount=3999, # amount is in cents
         description="Monthly Subscription").process()
     if form.accepted:
@@ -229,8 +229,8 @@ def upgrade():
     response.flash= T("Each month, 3 random users will be featured for free.")
     from gluon.contrib.stripe import StripeForm
     form = StripeForm(
-        pk="pk_live_oCW2Cs6vVgVm7vruOZab5ltR",
-        sk="sk_live_txoDl3rcoycXeGTGpoblBWGN",
+        pk="stripe key",
+        sk="stripe key",
         amount=799, # amount is in cents
         description="Monthly Subscription").process()
     if form.accepted:
